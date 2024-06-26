@@ -1,0 +1,29 @@
+.nav-container {
+  position: sticky;
+  z-index: 3;
+  top: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  background-color: black;
+}
+
+.navbar-logo{
+  justify-self: start;
+  margin-left: 20px;
+  color: white;
+  margin-top: 1vh;
+  cursor: pointer;
+}
+
+.seeCar {
+  font-size: 25px;
+  margin-right: 20px;
+  margin-top: 1vh;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
