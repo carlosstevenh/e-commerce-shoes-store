@@ -1,4 +1,6 @@
 import { useContext } from 'react';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 import { dataContext } from '../Context/DataContext';
 
 import './Products.css';
@@ -12,12 +14,21 @@ const Products = () => {
 
   return data.map((shoe) => {
     return (
-      <div className="card" key={shoe.id}>
-        <img src={shoe.foto} alt={shoe.title} />
-        <h3>{shoe.nombre}</h3>
-        <h4>$ {shoe.precio}</h4>
-        <button onClick={() => buyShoes(shoe)}>Buy</button>
-      </div>
+      <Card style={{ width: '18rem' }} key={shoe.id}>
+        <Card.Img variant="top" src={shoe.foto} className="imaShoe" />
+        <Card.Body>
+          <Card.Title>
+            {shoe.nombre} - ${shoe.precio}
+          </Card.Title>
+          <Card.Text>
+            Discover ultimate comfort and style with our latest shoes! Perfect
+            for any occasion. Shop now and step up your game!
+          </Card.Text>
+          <Button variant="primary" onClick={() => buyShoes(shoe)}>
+            Add to car
+          </Button>
+        </Card.Body>
+      </Card>
     );
   });
 };
