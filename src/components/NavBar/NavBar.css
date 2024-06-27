@@ -19,11 +19,15 @@
   cursor: pointer;
 }
 
-.seeCar {
+.car-button {
   font-size: 25px;
   margin-right: 20px;
   margin-top: 1vh;
   cursor: pointer;
   text-decoration: none;
   color: white;
+}
+
+.car-button:hover {
+  opacity: 0.7;
 }
